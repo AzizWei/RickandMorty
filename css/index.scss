@@ -1,0 +1,326 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}    
+section.backImage{
+    min-height: 90vh;
+    width: 100%;
+    background-image: url('../images/rick-and-morty.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bolder;
+    border-bottom: 1px solid white;
+
+    .filter{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.5);
+        width: 100%;
+        min-height: 90vh;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        opacity: 0;
+
+        &:hover{
+            opacity:1;
+            transition: .5s;
+        }
+
+
+        h3{
+            font-size: 3.5rem;
+            color: white;
+            margin: 2rem 0rem;
+            border: 10px solid #ccc;
+            background-color: #000;
+            padding: 10px 30px ;
+            font-family: 'Bebas Neue', cursive;
+
+        }
+        .btn{
+            background-color: #62b138;
+            padding: 1rem 2rem;
+            font-size: 2rem;
+            box-sizing: border-box;
+            color: #000;
+            border: 10px solid transparent;
+            border-radius: 1rem;
+            cursor: pointer;
+            margin: 100px auto;
+            font-family: 'Bebas Neue', cursive;
+            &:hover{
+                border:10px solid white;
+            }
+        }
+    }
+}
+section.second{
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    padding-bottom: 50px;
+    .wrap{
+        width: 100%;
+        margin: 40px auto;
+        h1{
+            font-size: 4rem;
+            color: #42b4ca;
+
+        }
+        h2{
+            font-size: 3rem;
+            margin: 2rem 0rem;
+            color: #000;
+        }
+        span{
+            color: #42b4ca;
+        }
+        iframe{
+            margin: 20px 0;
+        }
+        .picslide{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            img{
+                width: 350px;
+                margin:20px;
+
+                &:hover{
+                    border: 3px solid white;
+                    transform: scale(2);
+                }
+            }
+        }
+
+    }
+    
+}
+
+
+section.d-pocketmorty{
+    border: 10px solid #000;
+    border-radius: 30px;
+    width: 60%;
+    height: 70vw;
+    max-height: 800px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b7b5b4;
+    box-shadow: inset -5px -5px 15px #494747;
+    position: relative;
+
+    .decoration{
+        width: 80px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #3d658c;
+        border: 8px solid #000;
+        border-radius: 10px 25px 25px 10px;
+        box-shadow: inset -5px 5px 2px #fff;
+        position: absolute;
+        left: -30px;
+        
+        &::before{
+            content: "";
+            width: 50px;
+            height: 30px;
+            background-color: #124475;
+            border: 5px solid #000;
+            border-left: none;
+            border-radius: 0 10px 10px 0;
+            box-shadow: inset -2px 2px 2px #fff;
+            position: relative;
+            margin: 10px 0;
+        }
+        &::after{
+            content: "";
+            width: 50px;
+            height: 30px;
+            background-color: #124475;
+            border: 5px solid #000;
+            border-left: none;
+            border-radius: 0 10px 10px 0;
+            box-shadow: inset -2px 2px 1px #fff;
+            position: relative;
+            margin: 10px 0;
+        }
+    }
+
+    .wrap{
+        h1{
+            font-size: 50px;
+            color: #42b4ca;
+            background-color: #3d658c;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border: 5px solid black;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow:inset  -5px -5px #474646;
+        }
+
+    }
+    #d_space{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30vw;
+        height: 350px;
+        border: 10px solid #000;
+        border-radius: 30px;
+        box-sizing: border-box;
+        margin: auto 20px auto 60px;
+        background-color: #89c6da;
+        position: relative;
+        img{
+            width: 220px;
+            height: 310px;
+        }
+
+        .Mortyname{
+            width: 100%;
+            height: 40px;
+            font-size: 40px;
+            text-align: center;
+            color: #42b4ca;
+            background-color: #3d658c;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    .card-group{
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 20px;
+        justify-content: center;
+
+        .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // border: 5px solid #aaa;
+            margin: 20px 20px 0px;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #d9d1d0;
+            box-shadow: inset -5px -5px #000;
+            &:hover{
+                background-color: #746d6c;
+                transform: translate(-5px,5px);
+                transition: .3s;
+                box-shadow: inset 5px 5px 15px #000;
+                color: #fff;
+                img{
+                    opacity: .7;
+                }
+            }
+            img{
+                width: 5vw;
+                height: 5vw;
+            }
+            p{
+                font-size: 30px;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+.download{
+    text-align: center;
+    margin-bottom: 50px;
+
+    h2{
+        font-size: 5rem;
+    }
+    .appstore{
+        
+        .downloadpic{
+            width: 250px;
+            margin: 0px 30px;
+    
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:1024px){
+
+    section.d-pocketmorty{
+        width: 80%;
+        height: 900px;
+        flex-direction: column;
+
+        .wrap{
+            h1{
+                font-size: 40px;
+                margin: 20px 100px;
+            }
+    
+        }
+        #d_space{
+            width: 400px;
+            height: 350px;
+            border: 10px solid #000;
+            border-radius: 30px;
+            box-sizing: border-box;
+            margin: 20px auto;
+            background-color: #89c6da;
+
+        }
+    }
+
+}
+
+
+
+@media screen and (max-width:550px) {
+
+    iframe{
+        width: 100%;
+        height: 500px;
+    }
+
+
+    section.d-pocketmorty{
+        width: 80%;
+        min-height: 1100px;
+        flex-direction: column;
+
+
+        #d_space{
+            width: 300px;
+            height: 350px;
+            margin: 30px auto;
+        }
+    }
+
+
+    .card-group{
+        margin-left:30px ;
+    }
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- -- -->
+
+    <title>Rick And Morty</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Rick_and_Morty.svg" alt="logo">
+            </a>
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="login.html">Log in</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- image part of the first page -->
+        <section class="backImage">
+            <div class="filter">
+                <h3>
+                    Are you ready for adventure ?
+                </h3>
+                <button class="btn">NOW</button>
+            </div>
+        </section>
+        <!-- the second page -->
+        <section class="second">
+            <div class="wrap">
+                <h1>TV series</h1>
+                <h2>
+                    Rick and Morty <span>SEASON 6</span> IS COMING.
+                </h2>   
+                <iframe width="80%" height="800px" src="https://www.youtube-nocookie.com/embed/jerFRSQW9g8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="picslide">
+                    <img src="images/picslide/01.png" alt="pic">
+                    <img src="images/picslide/07.png" alt="pic">
+                    <img src="images/picslide/03.png" alt="pic">
+                    <img src="images/picslide/04.png" alt="pic">
+                    <img src="images/picslide/05.png" alt="pic">
+                    <img src="images/picslide/06.png" alt="pic">
+                </div>
+            </div>
+            <div class="wrap">
+                <h1>Mobile Games</h1>
+                <h2>POCKET MORTYS</h2>
+                <iframe width="80%" height="800px" src="https://www.youtube-nocookie.com/embed/N7a1Nd_0d1U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>              
+            </div>
+
+        </section>
+        <section class="d-pocketmorty">
+            <div class="decoration">
+
+            </div>
+            <div class="wrap" id="d_space"></div>
+            <div class="wrap">
+                <h1>Click Morty </h1>
+                <div class="card-group">
+                    <button class="card" onclick="displayFunc('001')">
+                        <img src="images/pocketM/001/001.png" alt="">
+                        <p>#001</p>
+                    </button>
+                    <button class="card" onclick="displayFunc('002')">
+                        <img src="images/pocketM/002/002.png" alt="#002">
+                        <p>#002</p>
+                    </button>
+                    <button class="card" onclick="displayFunc('003')">
+                        <img src="images/pocketM/003/003.png" alt="#003">
+                        <p>#003</p>
+                    </button>
+                    <button class="card" onclick="displayFunc('004')">
+                        <img src="images/pocketM/004/004.png" alt="#004">
+                        <p>#004</p>
+                    </button>
+                    <button class="card" onclick="displayFunc('005')">
+                        <img src="images/pocketM/005/005.png" alt="#005">
+                        <p>#005</p>
+                    </button>
+                    <button class="card" onclick="displayFunc('006')">
+                        <img src="images/pocketM/006/006.png" alt="#006">
+                        <p>#006</p>
+                    </button>
+                    <button class="card" onclick="displayFunc('007')">
+                        <img src="images/pocketM/007/007.png" alt="#007">
+                        <p>#007</p>
+                    </button>
+                    <button class="card" onclick="displayFunc('008')">
+                        <img src="images/pocketM/008/008.png" alt="#008">
+                        <p>#008</p>
+                    </button>
+                </div>
+            </div> 
+
+            <script src="JS/jquery-3.6.4.min.js"></script>
+            <script>
+                var morty=[
+                    {
+                        Number:"001",
+                        name:"Morty",
+                    },{
+                        Number:"002",
+                        name:"Scruffy Morty",
+                    },{
+                        Number:"003",
+                        name:"Unkempt Morty",
+                    },{
+                        Number:"004",
+                        name:"Hobo Morty",
+                    },{
+                        Number:"005",
+                        name:"Old Morty",
+                    },{
+                        Number:"006",
+                        name:"Geriatric Morty",
+                    },{
+                        Number:"007",
+                        name:"Ancient Morty",
+                    },{
+                        Number:"008",
+                        name:"Rabbit Morty",
+                    },
+                ]
+                var mortyName= [];
+
+                for (var i = 0; i < morty.length; i++) {
+                    var name = morty[i].name;
+                    mortyName.push(name); 
+                }
+
+                // console.log(mortyName); 
+
+                function displayFunc(num) {
+                for (var i = 0; i < morty.length; i++) {
+                    if (morty[i].Number === num) {
+                    var name = morty[i].name;
+                    document.getElementById("d_space").innerHTML =
+                        "<img src='./images/pocketM/" +
+                        num +"/" +num +".gif'>,<div class='Mortyname'>#" +
+                        num +" " +name +"</div>";
+                    break;
+                    }
+                }}
+            </script>
+        </section>
+
+        <div class="wrap download">
+            <h2>GET IT NOW</h2>
+            <a class="appstore" href="#">
+                <img class="downloadpic" src="images/APPstore_42b4ca.png" alt="APPstore">
+            </a>
+            <a class="appstore" href="#">
+                <img class="downloadpic" src="images/googleplay_42b4ca.png" alt="pic">  
+            </a>
+        </div>
+    </main> 
+    <footer>
+        <div class="wrap">
+            <div class="bigpic"></div>
+        </div>
+        <div class="wrap">
+            <h1>RICK AND MORTY</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="links">
+                <p>FOLLOW US</p>
+                <div class="wrap">
+                    <a href="#"><img src="images/icon/facebook.png" alt="facebook"></a>
+                    <a href="#"><img src="images/icon/instagram.png" alt="instagram"></a>
+                    <a href="#"><img src="images/icon/twitter.png" alt="twitter"></a>
+                    <a href="#"><img src="images/icon/youtube.png" alt="youtube"></a>
+                </div>
+            </div>
+        </div>  
+        <div class="wrap">
+            <img src="images/R_M_logo02.png" alt="logo">
+            <h1>&copy;Copyright S.C. WANG</h1>
+            <p>no.11200149295004</p>
+        </div>  
+    </footer>
+</body>
+</html>

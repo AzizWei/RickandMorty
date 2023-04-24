@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- -- -->
+
+    <title>Rick And Morty</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Rick_and_Morty.svg" alt="logo">
+            </a>
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="login.html">Log in</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <script src="https://kit.fontawesome.com/de998ff9a0.js" crossorigin="anonymous"></script>
+    <main>
+        <div class="charactersline">
+            <div class="character" id="RickSanchez">
+                <div class="filter "></div>
+            </div>
+            <div class="character" id="MortySmith">
+                <div class="filter"></div>
+            </div>
+            <div class="character" id="BethSmith">
+                <div class="filter"></div>
+            </div>
+            <div class="character" id="JerrySmith">
+                <div class="filter"></div>
+            </div>
+            <div class="character" id="SummerSmith">
+                <div class="filter"></div>
+            </div>
+        </div>
+        <div class="displayspace">
+            <div class="RickSanchez">
+                <h1>Rick Sanchez</h1>
+                <p>Richard "Rick" Sanchez of Dimension C-137, commonly referred to as Rick C-137, is the titular main protagonist of the Rick and Morty franchise.</p>
+                <p>He is a megagenius scientist whose alcoholism and reckless, nihilistic behavior are sources of concern for his "daughter's" family, as well as the safety of their son, Morty. Upon the series' inception, Rick's mysterious origins and mental health were large sources of speculation. As time has gone on, more has been revealed about his character; his backstory explaining much of his behavior. At the same time, Rick has continuously committed more heinous acts, certifying him as the series' anti-hero, bordering on antagonist.</p>
+            </div>
+            <div class="MortySmith">
+                <h1>Morty Smith</h1>
+                <p>He is the grandson of Rick Sanchez and is often forced to tag along on his various misadventures. Morty attends Harry Herpson High School along with his sister, Summer.At the beginning of the series, Morty was shown to be an incredibly anxious and submissive teenage boy. However, after going on many so-called adventures with Rick, Morty has seemingly become more confident and his own person, independent from Rick, rather than a mere sidekick.</p>
+            </div>
+            <div class="BethSmith">
+                <h1>Beth Smith</h1>
+                <p>She is the daughter of Rick and Diane Sanchez, the wife of Jerry Smith, and the mother of Summer Smith and the deceased Morty Smith. She currently acts as the mother and the daughter of the Morty Smith and Rick Sanchez from the Cronenberged dimension and Dimension C-137, respectively. She also works as a veterinarian at the St. Equis Hospital.</p>
+                <p>Characterized by a superiority complex and abandonment issues, Beth gradually came to struggle with her husband over his contributions to their marriage, due in part to his lower-level position and subsequent employment, further driven by her father influencing her feelings of superiority. The two eventually divorced, before reuniting in the Season 3 finale.</p>
+            </div>
+            <div class="JerrySmith">
+                <h1>Jerry Smith</h1>
+                <p>He was the husband of Beth and father of Summer and a deceased Morty. He was accidentally swapped out with a different Jerry Smith at the Jerryboree during the events of "Mortynight Run". He went home to that Jerry's dimension, where the divorce that began in "The Rickshank Rickdemption" and ended in "The Rickchurian Mortydate" never happened.</p>
+                <p>He was eventually returned to Dimension C-131 during the events of "Solaricks", where he decided to take a shower while waiting for the rest of the family to sort everything out. While complaining about his situation to them when they returned, he released a cute parasitic creature called Mr. Frundles, which bit him and took over his body and eventually the entire world.</p>
+            </div>
+            <div class="SummerSmith">
+                <h1>Summer Smith</h1>
+                <p>She currently acts as the older sister and the granddaughter of the Morty and Rick, respectively, from the Cronenberged Dimension and Dimension C-137. She is the only other known member of the the Smith Family to be aware of that fact.Although in "Solaricks" the whole family finds out that Rick and Morty are from another universe.As the series has progressed, Summer has become more frequently involved in Rick and Morty's adventures. She and Morty often squabble for Rick's affection, but also maintain a unique bond stemming from the revelation that Morty is not her original brother.</p>
+            </div>
+        </div>
+
+    <script src="JS/jquery-3.6.4.min.js"></script>
+    <script>
+
+
+        var character = ["RickSanchez", "MortySmith", "BethSmith", "JerrySmith", "SummerSmith"];
+
+
+        for (var i = 0; i < character.length; i++) {
+            (function (characterName) {
+                $("#" + characterName).hover(function () {
+                    $("."+characterName).css("display", "block");
+                }, function () {
+                    $("."+characterName).css("display", "none");
+                });
+            })(character[i]); 
+        }
+
+
+    </script>
+
+<!-- 
+    <script>
+        $(RickSanchez).hover(function(){
+            $(".RickSanchez").css("display","block")
+            },function(){
+            $(".RickSanchez").css("display","none")
+        });
+            
+        $(MortySmith).hover(function(){
+            $(".MortySmith").css("display","block")
+            },function(){
+            $(".MortySmith").css("display","none")
+        });
+
+        $(BethSmith).hover(function(){
+            $(".BethSmith").css("display","block")
+            },function(){
+                $(".BethSmith").css("display","none")
+        });
+
+        $(JerrySmith).hover(function(){
+            $(".JerrySmith").css("display","block")
+            },function(){
+            $(".JerrySmith").css("display","none")
+        });
+
+        $(SummerSmith).hover(function(){
+            $(".SummerSmith").css("display","block")
+            },function(){
+            $(".SummerSmith").css("display","none")
+        });
+
+
+    </script> -->
+    </main>
+    <footer>
+        <div class="wrap">
+            <div class="bigpic"></div>
+        </div>
+        <div class="wrap">
+            <h1>RICK AND MORTY</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="links">
+                <p>FOLLOW US</p>
+                <div class="wrap">
+                    <a href="#"><img src="images/icon/facebook.png" alt="facebook"></a>
+                    <a href="#"><img src="images/icon/instagram.png" alt="instagram"></a>
+                    <a href="#"><img src="images/icon/twitter.png" alt="twitter"></a>
+                    <a href="#"><img src="images/icon/youtube.png" alt="youtube"></a>
+                </div>
+            </div>
+        </div>  
+        <div class="wrap">
+            <img src="images/R_M_logo02.png" alt="logo">
+            <h1>&copy;Copyright S.C. WANG</h1>
+            <p>no.11200149295004</p>
+        </div>  
+    </footer>
+</body>
+</html>
